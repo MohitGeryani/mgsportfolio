@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../../constants/styles";
-import { ComputersCanvas } from "../canvas";
+
 import { config } from "../../constants/config";
 import Me from "../canvas/Me";
 
@@ -67,7 +67,7 @@ const Hero = () => {
             {line2Visible && ''}
           </p>
 
-          <ComputersCanvas />
+        
           <Me />
         </div>
       </div>
