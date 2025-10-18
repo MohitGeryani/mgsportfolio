@@ -25,7 +25,7 @@ header {
     /* center my image */
     left: calc(50% - 11rem);
     position: absolute;
-    margin-top: -2rem;
+    margin-top: 8rem !important;
  
     border-radius: 50rem;
 
@@ -56,15 +56,15 @@ header {
 /* Tablet */
 @media (max-width: 1024px) {
     .me {
-        width: 22rem;
-        height: 22rem;
-        left: calc(50% - 10rem);
-        margin-top: -1.5rem;
+        width: 30rem;
+        height: 30rem;
+        left: calc(50% - 15rem);
+        margin-top: 12rem !important;
     }
 
     .me img {
-        width: 20rem;
-        height: 20rem;
+        width: 28rem;
+        height: 28rem;
     }
 }
 
@@ -74,7 +74,7 @@ header {
         width: 16.5rem;
         height: 16.5rem;
         left: calc(50% - 8.2rem);
-        margin-top: 4rem;
+        margin-top: 4rem !important;
     }
 
     .me img {
