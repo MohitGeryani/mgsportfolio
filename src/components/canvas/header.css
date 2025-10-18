@@ -1,0 +1,84 @@
+header {
+    
+    overflow: hidden;
+
+}
+
+.header_container {
+    text-align: center;
+    
+    position: relative;
+}
+
+
+
+/* My IMAGE */
+
+.me {
+    background: linear-gradient( var(--color-primary), #02c3f365);
+    width: 22rem;
+   
+    height:22rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* center my image */
+    left: calc(50% - 11rem);
+    position: absolute;
+    margin-top: -2rem;
+ 
+    border-radius: 50rem;
+
+    /* padding: 1rem; */
+    cursor: pointer;
+    transition: var(--transition);
+   box-shadow: 0 0 45px 2px var(--color-primary) ; 
+
+    filter: brightness(100%) contrast(105%) opacity(100%);
+}
+
+.me:hover {
+    box-shadow: 0 0 50px 5px var(--color-primary);
+
+}
+
+.me img {
+    
+    height: 20rem;
+    object-fit: cover;
+    width: 20rem;
+    border-radius: 50%;
+}
+
+
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .me {
+        width: 22rem;
+        height: 22rem;
+        left: calc(50% - 10rem);
+        margin-top: -1.5rem;
+    }
+
+    .me img {
+        width: 20rem;
+        height: 20rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+    .me {
+        width: 16.5rem;
+        height: 16.5rem;
+        left: calc(50% - 8.2rem);
+        margin-top: 4rem;
+    }
+
+    .me img {
+        width: 15rem;
+        height: 15rem;
+    }
+}
