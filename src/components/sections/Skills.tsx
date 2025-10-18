@@ -61,13 +61,15 @@ const Skills: React.FC = () => {
     { name: "CSS", level: "Intermediate" },
     { name: "JavaScript", level: "Experienced" },
     { name: "React JS", level: "Experienced" },
-    { name: "Bootstrap", level: "Experienced" },
+    { name: "Next JS", level: "Experienced" },
     { name: "Tailwind CSS", level: "Experienced" },
+    { name: "Bootstrap", level: "Experienced" },
   ];
 
   const backend = [
     { name: "Node JS", level: "Experienced" },
     { name: "Express JS", level: "Intermediate" },
+    { name: "PostgreSQL", level: "Experienced" },
     { name: "MongoDB", level: "Experienced" },
     { name: "MySQL", level: "Experienced" },
     { name: "Python", level: "Experienced" },
