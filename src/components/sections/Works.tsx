@@ -66,7 +66,7 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
     onClick={() => window.open(sourceCodeLink, "_blank")}
     className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#915EFF] to-[#6E47E5] px-4 py-2 text-sm font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-purple-500/40 active:scale-95"
   >
-    View Project
+    Live Demo
   </button>
 </div>
 
