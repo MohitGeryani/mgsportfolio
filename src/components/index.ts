@@ -5,7 +5,7 @@ import {
   // ComputersCanvas,
   StarsCanvas,
 } from "./canvas";
-import Hero from "./sections/Hero";
+import Hero from "./sections/"
 import Navbar from "./layout/Navbar";
 import About from "./sections/About";
 import Tech from "./sections/Tech";
