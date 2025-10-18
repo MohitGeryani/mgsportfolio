@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { OrbitControls, Preload } from "@react-three/drei";
 
 import CanvasLoader from "../layout/Loader";
 
@@ -16,9 +16,12 @@ const Computers: React.FC<{ isMobile: boolean }> = ({ isMobile }) => {
         penumbra={1}
         intensity={1}
         castShadow
+        
         shadow-mapSize={1024}
       />
-      <pointLight intensity={1} />
+      <pointLight intensity={1} onClick={()=> {
+        isMobile
+      }} />
       {/* <primitive
         object={computer.scene}
         scale={isMobile ? 0.7 : 0.75}
