@@ -5,7 +5,6 @@ import { random } from "maath";
 import { TypedArray } from "three";
 import * as THREE from "three";
 
-
 const Stars = (props: any) => {
   const ref = useRef<THREE.Points>();
   const [sphere] = useState<TypedArray>(() =>
@@ -35,13 +34,24 @@ const Stars = (props: any) => {
 };
 
 const StarsCanvas = () => {
+  const [loaded, setLoaded] = useState(false);
+
   return (
-    <div className="absolute inset-0 z-[-1] h-auto w-full pointer-events-none" >
-      <Canvas camera={{ position: [0, 0, 1] }}>
+    <div className="absolute inset-0 z-[-1] h-auto w-full pointer-events-none">
+      {!loaded && (
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: "rgb(21 16 48 / 1)" }}
+        />
+      )}
+
+      <Canvas
+        camera={{ position: [0, 0, 1] }}
+        onCreated={() => setLoaded(true)}
+      >
         <Suspense fallback={null}>
           <Stars />
         </Suspense>
-
         <Preload all />
       </Canvas>
     </div>

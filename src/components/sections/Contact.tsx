@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-import { EarthCanvas } from "../canvas";
+// import { EarthCanvas } from "../canvas";
 import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
 import { config } from "../../constants/config";
@@ -76,7 +76,7 @@ const Contact = () => {
 
   return (
     <div
-      className="md:min-w-36flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row"
+      className="md:min-w-36flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row "
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}

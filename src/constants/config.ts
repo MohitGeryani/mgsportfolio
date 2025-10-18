@@ -42,11 +42,11 @@ export const config: TConfig = {
   html: {
     title: "Mohit Geryani",
     fullName: "Mohit Geryani",
-    email: "johndoe@mail.com",
+    email: "mohitgeryani@gmail.com",
   },
   hero: {
     name: "Mohit Geryani",
-    p: ["I develop Full Stack Applications"],
+    p: ["I'm a Full Stack Developer"],
   },
   contact: {
     p: "Get in touch",
