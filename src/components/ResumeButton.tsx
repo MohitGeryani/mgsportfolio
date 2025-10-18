@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { motion } from "framer-motion";
 import resume from "../assets/resume/resume.pdf"; // Update the path if needed
 import { fadeIn } from "../utils/motion";
