@@ -38,6 +38,7 @@ import {
 import proj1 from '../assets/images/project1.jpg'
 import proj2 from '../assets/images/project2.jpg'
 import proj3 from '../assets/images/project3.jpg'
+import proj4 from '../assets/images/project4.webp'
 
 import celebal from '../assets/images/logo2.png'
 import cprime from '../assets/images/logo1.png'
@@ -221,6 +222,31 @@ const testimonials: TTestimonial[] = [
 ];
 
 const projects: TProject[] = [
+  {
+    name: "AI Slides Chat: AI PPTx Generator & Editor",
+    description:
+      "An advanced AI-powered web app that creates, edits, and personalizes PowerPoint presentations from a simple text prompt.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "apis",
+        color: "green-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: proj4,
+    sourceCodeLink: "https://aislides-mu.vercel.app/",
+  },
   {
     name: "MG's Cart: A Fullstack Ecommerce WebApp",
     description:
