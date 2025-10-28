@@ -35,6 +35,26 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+      // --- Validation ---
+  if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+    setStatus({
+      type: "error",
+      message: "Please fill out all fields before submitting.",
+    });
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(form.email)) {
+    setStatus({
+      type: "error",
+      message: "Please enter a valid email address.",
+    });
+    return;
+  }
+
+
     setLoading(true);
     setStatus({ type: "", message: "" });
 
