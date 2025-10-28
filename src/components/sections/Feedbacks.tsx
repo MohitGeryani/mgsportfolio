@@ -46,20 +46,28 @@ const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
 
 const Feedbacks = () => {
   return (
-    <div className="bg-black-100 mt-12 rounded-[20px]">
-      <div
+    <motion.section
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      className="bg-black-100 mt-12 rounded-[20px]"
+    >
+      <motion.div
+        variants={fadeIn("up", "spring", 0.2, 0.75)}
         className={`${styles.padding} bg-tertiary min-h-[300px] rounded-2xl`}
       >
         <Header useMotion={true} {...config.sections.feedbacks} />
-      </div>
-      <div
+      </motion.div>
+
+      <motion.div
+        variants={fadeIn("", "spring", 0.3, 1)}
         className={`${styles.paddingX} -mt-20 flex flex-wrap gap-7 pb-14 max-sm:justify-center`}
       >
         {testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.section>
   );
 };
 
