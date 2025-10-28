@@ -45,6 +45,8 @@ const Contact = () => {
     return;
   }
 
+  /// valid mail
+
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(form.email)) {
     setStatus({
