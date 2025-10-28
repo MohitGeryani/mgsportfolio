@@ -67,7 +67,7 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "About Me",
-      content: `I'm a Full-stack developer with 1.5+ years of experience and a B.Tech. Worked at Cprime (Goldman Sachs & Everstone company) on projects like CHN, SABIC, DIR & more. Skilled in MERN stack, C++, Python, DSA, and ServiceNow. Passionate about building secure apps and continuous learning.`,
+      content: `I’m a Full Stack Developer with a strong focus on building meaningful and user-driven digital experiences. Over the past 1.5 years, I’ve worked with companies like Cprime (A Goldman Sachs & Everstone Company) , INRY, and Celebal Technologies, contributing to real-world projects for clients such as CHN, SABIC, DIR, Danaher, & more. I enjoy creating applications that feel intuitive, perform seamlessly, and solve real problems, from complex enterprise systems to AI-powered chatbots that can generate and edit presentations. \n Beyond coding, I’m passionate about design and storytelling. I love photo and video editing, graphic design, and content creation, which add a creative perspective to my technical work. I believe a great product isn’t just developed, it’s thoughtfully crafted with imagination, clarity, and purpose.`,
     },
     experience: {
       p: "What I have done so far",

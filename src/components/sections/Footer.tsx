@@ -1,4 +1,4 @@
-import { FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi';
+import { FiFacebook, FiGithub, FiInstagram, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import './footer.css';
 
 const Footer = () => {
@@ -15,13 +15,15 @@ const Footer = () => {
     </ul>
 
     <div className="footer_socials">
+      <a href="https://linkedin.com/in/mohit-geryani"><FiLinkedin/></a>
       <a href="https://facebook.com/mohitgeryani"><FiFacebook/></a>
       <a href="https://www.instagram.com/mohit_geryan/?hl=en"><FiInstagram/></a>
+      <a href="https://github.com/MohitGeryani"><FiGithub/></a>
       <a href="https://x.com/mohitgeryani"><FiTwitter/></a>
     </div>
 
     <div className="footer_copyright">
-      <small>&copy; Mohit Geryani, All rights reserved.</small>
+      <small>&copy; {new Date().getFullYear()} Mohit Geryani, All rights reserved.</small>
     </div>
 
    </footer>

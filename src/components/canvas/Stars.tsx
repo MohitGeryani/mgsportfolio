@@ -1,4 +1,4 @@
-import { useState, useRef, Suspense } from "react";
+import { useState, useRef, useEffect, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import { random } from "maath";
@@ -25,7 +25,7 @@ const Stars = (props: any) => {
           transparent
           color="#f272c8"
           size={0.002}
-          sizeAttenuation={true}
+          sizeAttenuation
           depthWrite={false}
         />
       </Points>
@@ -35,6 +35,34 @@ const Stars = (props: any) => {
 
 const StarsCanvas = () => {
   const [loaded, setLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      const mobile =
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        ) || window.innerWidth < 768;
+      setIsMobile(mobile);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // 🧩 On mobile, just show static gradient instead of 3D stars
+  if (isMobile) {
+    return (
+      <div
+        className="absolute inset-0 z-[-1] w-full h-full"
+        style={{
+          background:
+            "radial-gradient(circle at center, #2b1d52 0%, #120a2e 100%)",
+        }}
+      />
+    );
+  }
 
   return (
     <div className="absolute inset-0 z-[-1] h-auto w-full pointer-events-none">
@@ -47,6 +75,8 @@ const StarsCanvas = () => {
 
       <Canvas
         camera={{ position: [0, 0, 1] }}
+        dpr={[1, 1.5]} // reduces GPU load
+        gl={{ antialias: true, powerPreference: "low-power" }}
         onCreated={() => setLoaded(true)}
       >
         <Suspense fallback={null}>
